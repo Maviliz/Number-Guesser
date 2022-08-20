@@ -1,0 +1,14 @@
+
+If guessDigit = trueDigit.inTheRightSpot then output=+.
+
+If guessDigit = trueDigit.inTheWrongSpot then output =-
+
+If guessDigit != trueDigit.atAll then output= " "
+
+If guess number < 10 and maxOutput is not "++++", then prompt user for another guess. While loop? break case give up?
+
+Every guess creates an object with getters and setters to compare digits?
+
+If a digit > is provided, display an error, do not accept the digit, and prompt the user for another guess within listed parameters
+
+
