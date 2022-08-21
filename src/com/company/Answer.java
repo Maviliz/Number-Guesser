@@ -25,7 +25,7 @@ public class Answer {
         String step = "";
         String answer = "";
         for (int i = 0; i < 4; i++) {
-            int holder = getRandomNumber(1, 6);
+            int holder = getRandomNumber(1, 7);
             step = String.valueOf(holder);
             answer= answer+step;
         }
