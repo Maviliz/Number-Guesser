@@ -24,25 +24,19 @@ public class Main {
 
         //generate a code to guess
 
-        System.out.println(answerCode.getNumber() + " is the answer to guess");
-
-        attempt.compareNumber(answerCode.getNumber());
-        System.out.println(answerCode.getNumber());
+//        System.out.println(answerCode.getNumber() + " is the answer to guess");
+//
+//        attempt.compareNumber(answerCode.getNumber());
+//        System.out.println(answerCode.getNumber());
 
 
 //
 //    Guess.runGame();
 
-        //Todo 1: make random number generator with constraints
-
-        //Todo 2: make user input method
-
-        //Todo 3: make conversion to array to loop through for comparison
-
-        //Todo 4: initialize 'guess' object
-
-        //Todo 5: initialize 'answer' object
-
-        //Todo 6: input validation for userGuess
+        //Todo: Run Guess.takeAGuess again if result != '++++'
+        //Todo: Add counter for user attempts taken
+        //Todo: Add game over message after 10 attempts
+        //Todo: WISHLIST: input validation for userGuess
+        
     }
 }
