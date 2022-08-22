@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Guess {
     //fields
-
-
+    static int attemptsTaken = 0;
+    static int maxAttempts = 10;
     private int count = 0;                                  //to keep track of how many ints have been generated
     public ArrayList<String> arr = new ArrayList<>();
 
@@ -21,24 +21,30 @@ public class Guess {
         Scanner input;
         input = new Scanner(System.in);
         String userGuess = input.next();
+        attemptsTaken++;
         return userGuess;
     }
 
-    public static char[] arrayMaker(String text) {   //convert any 4 digit String to array
-        String s = text;
-        char[] output = s.toCharArray();
-        return output;
+    public static void statusCheck(String result){
+        if (result.equals("++++")) {
+            System.out.println("Congratulations! You have correctly guessed the code and won this game!");
+        } else {
+            if (attemptsTaken < maxAttempts) {
+                int remaining =  maxAttempts - attemptsTaken;
+                System.out.println("Try again! You have " + remaining + " remaining attempts.");
+                takeAGuess();
+            } else {
+                System.out.println("Max of 10 attempts reached. Game over");
+            }
+
+        }
     }
-
-
-
- /*   public static String runGame(){
-        String takeGuess = takeAGuess();
-        Array guessArray = arrayMaker(takeGuess);
-        String correctAnswer = Answer.answerMaker();
-        Array answerArray = arrayMaker(correctAnswer);
-        guessGrade(guessArray, answerArray);
-*/
+    public static void nextGuess (){
+        Passcode newAttempt = new Passcode(Guess.takeAGuess());
+    }
+//    public static void nextGuess (){
+//        attempt.setNumber(this.takeAGuess());
+//    }
     }
 
 
