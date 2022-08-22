@@ -20,20 +20,21 @@ public class Passcode {
         String result ="";
         for (int i = 0; i < target.length(); i++) {
             if (number.charAt(i) == target.charAt(i)) {
-                result =result + "+";
+                result = result + "+";
             } else {                                    //loop through answer digits and compare to current guess digit
                 boolean contains = false;
                 String current = number.charAt(i)+"";    //converts int to String
                 for (int j=0; j<target.length(); j++) {
-                    if (target.charAt(i) == number.charAt(i)) {
+                    if (target.charAt(j)+"" == current) {
                         contains = true;
-                        break;
+                        result = result + "-";
+                                                  //TODO: fix this logic so present but misplaced digits show a '-'
                     }
                 }
                 if (contains) {
-                    result =result + "-";
+                    result = result + "-";
                 } else {
-                    result =result + " ";
+                    result = result + " ";
 
                 }
             }

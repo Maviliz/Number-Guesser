@@ -8,12 +8,13 @@ public class Main {
         // write your code here
         // 1. generate answer
         Passcode answerCode = new Passcode(Answer.answerMaker());
+        System.out.println(answerCode.getNumber() + " is the answer to guess");
         //2. prompt user for guess
         Passcode attempt = new Passcode(Guess.takeAGuess());
-
+        System.out.println(attempt.getNumber());
         // 3. compare guess to answer
-        String runCompare = answerCode.compareNumber(answerCode.getNumber());
-        System.out.printf(runCompare);
+        String runCompare = attempt.compareNumber(answerCode.getNumber());
+        System.out.println(runCompare+" runCompare");
         //4. if correct, display wooo hooo you win
 
         //5. if partially correct, indicate so
