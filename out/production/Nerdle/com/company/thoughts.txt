@@ -1,4 +1,6 @@
 
+Make abstract class Passcode, add a method to compare digits, make answer and guess Passcode objects
+
 If guessDigit = trueDigit.inTheRightSpot then output=+.
 
 If guessDigit = trueDigit.inTheWrongSpot then output =-
@@ -12,3 +14,28 @@ Every guess creates an object with getters and setters to compare digits?
 If a digit > is provided, display an error, do not accept the digit, and prompt the user for another guess within listed parameters
 
 
+ public boolean compareNumber(char[] target) {
+        //TODO: write function to compare numbers: loop through each digit, return -,+, or " " depending on comparison result
+        char[] result;
+        for (int i = 0; i < target.length(); i++) {
+            if (number[i] = target[i]) {
+                result = "+";
+            } else {                                    //loop through answer digits and compare to current guess digit
+                boolean contains = false;
+                for (char c : target) {
+                    if (c == number[i]) {
+                        contains = true;
+                        break;
+                    }
+                }
+                if (contains) {
+                    result = "-";
+                } else {
+                    result = " ";
+
+                }
+            }
+        }
+    }
+
+}

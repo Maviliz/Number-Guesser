@@ -15,7 +15,7 @@ public class Passcode {
     //methods
 
     public String compareNumber(String target) {
-        //TODO: write function to compare numbers: loop through each digit, return -,+, or " " depending on comparison result
+        //Done: write function to compare numbers: loop through each digit, return -,+, or " " depending on comparison result
         //String comparison for '-' check was not working, switched to char for easier comparison
         String result = "";
         for (int i = 0; i < target.length(); i++) {
@@ -29,7 +29,7 @@ public class Passcode {
                         result = result + "-";
                         contains = true;
                         break;
-                        //TODO: fix this logic because it's still printing " " for all other digits of target
+                        //fixed: fix this logic because it's still printing " " for all other digits of target
                     }
                 }
                 if (!contains) {
@@ -38,6 +38,7 @@ public class Passcode {
             }
 
         }
+        System.out.println(result);
         return result;
     }
 
